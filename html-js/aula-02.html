@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - 02</title>
+</head>
+<body>
+    <form id="form">
+        <h3>0</h3>
+        <input type="text" placeholder="nome" id="valor1">
+        <input type="text" placeholder="nome" id="valor2">
+        <button id="btn__cadastrar">Calcular</button>
+    </form>
+
+    <style>
+        *{ 
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+
+            border: none;
+            outline: 0;
+        }
+        body{
+            color: #fff;
+        }
+        #form{
+            height: 300px;
+
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            background-color: blueviolet;
+        }
+        input{
+            padding-left: 10px;
+            color: #fff;
+            height: 35px;
+            background-color: blue;
+            border-radius: 7px;
+        }
+        button{
+            height: 35px;
+            width: 120px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 7px;
+            background-color: brown;
+        }
+
+    </style>
+
+    <script>
+        var valor1 = document.querySelector('#valor1')
+        var valor2 = document.getElementById('valor2')
+        var titulo = document.querySelector('h3')
+        var button = document.querySelector('button')
+
+        console.log(titulo)
+
+        /* 
+        document.getElementById("btn__cadastrar").addEventListener("click", function(event){
+            event.preventDefault()
+
+            // total = calcularProduto(Number(valor1.value), Number(valor2.value))
+            // total = calcularProduto(+valor1.value, +valor2.value)
+            total = calcularProduto(parseFloat(valor1.value), parseFloat(valor2.value))
+            titulo.textContent = total
+        });
+        */
+
+        /*
+        button.onclick = function(event){
+            event.preventDefault()
+
+            total = calcularProduto(17, 7)
+            titulo.textContent = total
+        }
+        */
+        
+        /* */
+        button.onclick = function(event){
+            event.preventDefault()
+            /*
+                console.log(valor1.value)
+                console.log(valor2.value)
+                console.log( +valor1.value + +valor2.value)
+                console.log( Number(valor1.value) + Number(valor2.value))
+                console.log( parseFloat(valor1.value) + parseFloat(valor2.value))
+            */
+           console.log(typeof +valor1.value)
+           console.log(typeof +valor2.value)
+        }
+        
+        function calcularProduto(preco, qtd){
+            return total = preco * qtd
+        }
+
+    </script>
+</body>
+</html>
